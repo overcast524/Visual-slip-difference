@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+    /* 浏览器滚动行为 */
+    scroll-behavior: smooth;
+}
+header{
+    
+
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    /* 堆叠顺序 */
+    z-index: 10;
+    padding: 20px 100px;
+    box-sizing: border-box;
+    display: flex; 
+    /* 主轴上的对齐方式   两端对齐 */
+    justify-content: space-between;
+    /* 默认对齐方式 */
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+header #logo{
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-left: 90px;
+    /* 大写 */
+    text-transform: uppercase;  
+    font-weight: 700;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    font-weight: 600;
+    margin-left: 15px;
+    /* 动画过渡 */
+    transition: all .5s linear;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+header ul li:hover{
+    background: #fff;
+    color: #2b1055;
+}
+header ul li .active{
+    background-color: #fff;
+    color: #2b1055;
+}
+section{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+section img{
+   
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* 居中自动 裁剪 */
+    object-fit: cover;
+    pointer-events: none;
+}
+section .desc{
+    position: absolute;
+    z-index: 5;
+    font-size: 70px;
+    font-weight: 700;
+    right: -350px;
+    white-space: nowrap;
+}
+section::after{
+   
+
+    content: '';
+    display: block;
+
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 7;
+}
+.stars{
+    z-index: 1;
+}
+.moon{
+    z-index: 2;
+    mix-blend-mode: screen;
+
+}
+.mountains_behind{
+    z-index: 4;
+}
+.mountains_front {
+    z-index: 5;
+}
+.text h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.text{
+    color: white;
+    padding: 20px 150px;
+    background-color: #1c0522;
+}

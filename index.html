@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视觉差滑动</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">logo </div>
+        <ul>
+            <li id="active">主页</li>
+            <li>文章</li>
+            <li>关于</li>
+            <li>我的</li>
+        </ul>
+
+
+    </header>
+
+    <section>
+        <img src="./images/stars.png" alt class="stars" style="left: 0px;">
+        <img src="./images/moon.png" alt class="moon" style="top: 0px;">
+        <div class="desc" style="margin-top:0px;margin-right:0px">Hello World</div>
+        <img src="./images/mountains_behind.png" alt class="mountains_behind" style="top: 0px;">
+        <img src="./images/mountains_front.png" alt class="mountains_front">
+    </section>
+
+    <div class="text">
+        <h2>The Kite Runner</h2>
+        <p>
+            It may be unfair,but what happens in a few days,sometimes even a single day,can change the course of a whole
+            lifetime.
+            <br>
+            <br>
+            With me as the glaring exception, my father molded the world around him to his liking. The problem, of
+            course, was that Baba saw the world in black and white. And he got to decide what was black and what was
+            white. You can't love a person who lives that way without fearing him too. Maybe even hating him a little.
+            <br>
+            <br>
+            I think that everything he did, feeding the poor, giving money to friends in need, it was all a way of
+            redeeming himself. And that, I believe, is what true redemption is, Amir jan, when guilt leads to good.
+            <br>
+            <br>
+            One time, when I was really little, I climbed a tree and ate these green, sour apples. My stomach swelled
+            and became hard like a drum, it hurt a lot. Mother said that if I'd just waited for the apples to ripen, I
+            wouldn't have become sick. So now, whenever I really want something, I try to remember what she said about
+            the apples.
+            <br>
+            <br>
+            There is only one sin, only one. And that is theft. Every other sin is a variation of theft....When you kill
+            a man, you steal a life. You steal his wife's right to a husband, rob his children of a father. When you
+            tell a lie, you steal someone's right to the truth. When you cheat, you steal the right to fairness.
+            <br><br>
+            If America taught me anything, it's that quitting is right up there with pissing in the Girl Scouts'
+            lemonade jar.
+            <br><br>
+            I ran. A grown man running with a swarm of screaming children. But I didn't care. I ran with the wind
+            blowing in my face, and a smile as wide as the valley of Panache on my lips. I ran.
+        </p>
+    </div>
+
+    <script>
+        const stars = document.querySelector('.stars');
+        const moon = document.querySelector('.moon');
+        const desc = document.querySelector('.desc');
+        const mountains_behind = document.querySelector('.mountains_behind');
+        const mountains_front = document.querySelector('.mountains_front');
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px'
+            moon.style.top = value * 1 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            desc.style.marginTop = value * 1.5 + "px";
+            desc.style.marginRight = value * 2.5 + "px";
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>
